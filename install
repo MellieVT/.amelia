@@ -1,0 +1,16 @@
+# Install oh-my-zsh
+[ ! -e ~/.oh-my-zsh ] && git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+
+# Link git config
+ln -sf ~/.rika/gitconfig ~/.gitconfig
+
+# Link .zshrc
+ln -sf ~/.rika/zshrc ~/.zshrc
+
+touch ~/.hushlogin
+
+# Change current shell to zsh
+TEST_CURRENT_SHELL=$(expr "$SHELL" : '.*/\(.*\)')
+if [ "$TEST_CURRENT_SHELL" != "zsh" ]; then
+	chsh -s $(grep /zsh$ /etc/shells | tail -1)
+fi
