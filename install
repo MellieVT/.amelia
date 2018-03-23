@@ -7,6 +7,9 @@ ln -sf ~/.rika/gitconfig ~/.gitconfig
 # Link .zshrc
 ln -sf ~/.rika/zshrc ~/.zshrc
 
+# Link .taskrc
+ln -sf ~/.rika/taskrc ~/.taskrc
+
 touch ~/.hushlogin
 
 # Change current shell to zsh
