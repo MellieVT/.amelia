@@ -40,6 +40,9 @@ ln -sf ~/.rika/gitconfig ~/.gitconfig
 # Link .zshrc
 ln -sf ~/.rika/zshrc ~/.zshrc
 
+# Link .zshenv
+ln -sf ~/.rika/zshenv ~/.zshenv
+
 # Link .taskrc
 ln -sf ~/.rika/taskrc ~/.taskrc
 
