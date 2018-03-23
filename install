@@ -7,6 +7,33 @@
 # Install oh-my-zsh
 [ ! -e ~/.oh-my-zsh ] && git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
+# Tap Homebrew Cask
+brew tap caskroom/cask
+
+# Install Atom
+brew cask install atom
+
+# Install IINA
+brew cask install iina
+
+# Install Slack
+brew cask install slack
+
+# Install Docker
+brew cask install docker
+
+# Install 1Password
+brew cask install 1password
+
+# Install irccloud
+brew cask install irccloud
+
+# Install Plex Media Player
+brew cask install plex-media-player
+
+# Install Transmit
+brew cask install transmit
+
 # Link git config
 ln -sf ~/.rika/gitconfig ~/.gitconfig
 
