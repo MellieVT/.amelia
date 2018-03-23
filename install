@@ -19,7 +19,8 @@ ln -sf ~/.rika/taskrc ~/.taskrc
 touch ~/.hushlogin
 
 # Change current shell to zsh
-TEST_CURRENT_SHELL=$(expr "$SHELL" : '.*/\(.*\)')
-if [ "$TEST_CURRENT_SHELL" != "zsh" ]; then
-	chsh -s $(grep /zsh$ /etc/shells | tail -1)
+shell_path="$(brew --prefix)/bin/zsh"
+if ! grep "$shell_path" /etc/shells > /dev/null 2>&1 ; then
+ sudo bash -c "echo $shell_path >> /etc/shells"
 fi
+[ $SHELL != $shell_path ] && chsh -s "$shell_path"
