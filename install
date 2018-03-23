@@ -1,3 +1,9 @@
+# Install Homebrew
+[ $(command -v brew) == "" ] && ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# Install zsh from Homebrew if it hasn't been already (macOS one is OLD)
+[ ! -e /usr/local/bin/zsh ] && brew install zsh zsh-completions
+
 # Install oh-my-zsh
 [ ! -e ~/.oh-my-zsh ] && git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
