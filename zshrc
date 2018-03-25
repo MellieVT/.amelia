@@ -74,7 +74,7 @@ source $ZSH/oh-my-zsh.sh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, 
+# plugins, and themes. Aliases can be placed here,
 
 # Stop the user@host part appearing on the powerline when local, we know what system we're on!
 DEFAULT_USER=`whoami`
@@ -104,4 +104,9 @@ prme() {
     repo=$(git remote get-url origin|sed "s/:/\\//; s/\\.git//; s/git@/https:\\/\\//")
     branch=$(git rev-parse --abbrev-ref HEAD)
     chrome "${repo}/compare/${branch}?expand=1"
+}
+
+# Push the current branch to origin (most likely GitHub)
+pushb() {
+    git push -u origin $(git rev-parse --abbrev-ref HEAD)
 }
