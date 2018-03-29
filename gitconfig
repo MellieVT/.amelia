@@ -5,4 +5,4 @@
 	email = Rika@monzo.com
 
 [url "git@github.com:monzo/"]
-    insteadOf = "https://github.com/monzo"
+    insteadOf = "https://github.com/monzo/"
