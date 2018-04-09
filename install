@@ -46,6 +46,10 @@ ln -sf ~/.rika/zshenv ~/.zshenv
 # Link .taskrc
 ln -sf ~/.rika/taskrc ~/.taskrc
 
+# Link gpg-agent.conf
+mkdir -p ~/.gnupg
+ln -sf ~/.rika/gpg-agent.conf ~/.gnupg/gpg-agent.conf
+
 touch ~/.hushlogin
 
 # Change current shell to zsh
