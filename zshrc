@@ -86,6 +86,13 @@ DEFAULT_USER=`whoami`
 # Display the trans flag Monzo logo
 source $ZSH_CUSTOM/monzo-trans
 
+# I'm lazy
+alias k="kubectl"
+alias h="helm"
+alias g="git"
+alias ga="git annex"
+alias d="docker"
+
 # Helpful general custom aliases
 alias cpuuid="uuidgen | tee >(cat) | tr -d '\n' | pbcopy"
 
