@@ -51,6 +51,7 @@ ZSH_CUSTOM=~/.rika
 plugins=(
   git
   kubectl
+  helm
 )
 
 source $ZSH/oh-my-zsh.sh
