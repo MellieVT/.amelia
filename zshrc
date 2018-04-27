@@ -102,6 +102,12 @@ alias safari="open -a 'Safari'"
 
 # Monzo specific aliases
 alias wearedev="cd ~/src/github.com/monzo/wearedev/"
+
+wearedeb() {
+  cat ~/.rika/wearedeb
+  wearedev
+}
+
 jira() { chrome https://mondough.atlassian.net/browse/"$@"; }
 jirab() { chrome https://mondough.atlassian.net/browse/$(git rev-parse --abbrev-ref HEAD | cut -f1,2 -d'-'); }
 alias confluence="chrome https://mondough.atlassian.net/wiki/discover/all-updates"
