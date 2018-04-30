@@ -122,11 +122,11 @@ taskb() {
 taskbc() {
     branch=$(git rev-parse --abbrev-ref HEAD | cut -f1,2 -d'-');
     task add +work project:${branch} "Push branch"
-    task add +work project:${branch} "Open pull request"
-    task add +work project:${branch} "Get code review"
-    task add +work project:${branch} "Deploy to s101"
-    task add +work project:${branch} "Test in staging"
-    task add +work project:${branch} "Deploy to production"
+    task add +work project:${branch} depends:$(task +LATEST limit:1 ids) "Open pull request"
+    task add +work project:${branch} depends:$(task +LATEST limit:1 ids) "Get code review"
+    task add +work project:${branch} depends:$(task +LATEST limit:1 ids) "Deploy to s101"
+    task add +work project:${branch} depends:$(task +LATEST limit:1 ids) "Test in staging"
+    task add +work project:${branch} depends:$(task +LATEST limit:1 ids) "Deploy to production"
 }
 
 # git
