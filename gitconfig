@@ -1,8 +1,9 @@
-# This is Git's per-user configuration file.
 [user]
-# Please adapt and uncomment the following lines:
 	name = Rika Raybould
-	email = Rika@monzo.com
+	email = Rika@labcoats.eu
+
+[includeIf "gitdir:~/src/github.com/monzo/"]
+    path = ~/.rika/git/monzoconfig
 
 [url "git@github.com:monzo/"]
     insteadOf = "https://github.com/monzo/"
