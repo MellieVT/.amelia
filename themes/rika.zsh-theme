@@ -198,6 +198,13 @@ prompt_virtualenv() {
   fi
 }
 
+prompt_triasprofile() {
+  local triasprofile="$TRIAS_PROFILE"
+  if [[ -n "$triasprofile" ]]; then
+        prompt_segment cyan black "$triasprofile"
+  fi
+}
+
 # Status:
 # - was there an error
 # - am I root
@@ -217,6 +224,7 @@ build_prompt() {
   RETVAL=$?
   prompt_status
   prompt_virtualenv
+  prompt_triasprofile
   prompt_context
   prompt_dir
   prompt_git
