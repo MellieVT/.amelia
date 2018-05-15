@@ -35,20 +35,20 @@ brew cask install plex-media-player
 brew cask install transmit
 
 # Link git config
-ln -sf ~/.rika/gitconfig ~/.gitconfig
+ln -sf .rika/gitconfig ../.gitconfig
 
 # Link .zshrc
-ln -sf ~/.rika/zshrc ~/.zshrc
+ln -sf .rika/zshrc ../.zshrc
 
 # Link .zshenv
-ln -sf ~/.rika/zshenv ~/.zshenv
+ln -sf .rika/zshenv ../.zshenv
 
 # Link .taskrc
-ln -sf ~/.rika/taskrc ~/.taskrc
+ln -sf .rika/taskrc ../.taskrc
 
 # Link gpg-agent.conf
 mkdir -p ~/.gnupg
-ln -sf ~/.rika/gpg-agent.conf ~/.gnupg/gpg-agent.conf
+ln -sf .rika/gpg-agent.conf ../.gnupg/gpg-agent.conf
 
 touch ~/.hushlogin
 
