@@ -48,7 +48,7 @@ ln -sf .rika/taskrc ../.taskrc
 
 # Link gpg-agent.conf
 mkdir -p ~/.gnupg
-ln -sf .rika/gpg-agent.conf ../.gnupg/gpg-agent.conf
+ln -sf ../.rika/gpg-agent.conf ../.gnupg/gpg-agent.conf
 
 touch ~/.hushlogin
 
