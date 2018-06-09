@@ -32,3 +32,4 @@ data.location=~/.task
 context.home=-work
 context.work=+work
 default.command=next -BLOCKED
+verbose=blank,label
