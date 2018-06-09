@@ -5,6 +5,9 @@
 [includeIf "gitdir:~/src/github.com/monzo/"]
     path = ~/.rika/git/monzoconfig
 
+[includeIf "gitdir:~/src/git.projectflower.eu/"]
+    path = ~/.rika/git/flowerconfig
+
 [url "git@github.com:monzo/"]
     insteadOf = "https://github.com/monzo/"
 [alias]
