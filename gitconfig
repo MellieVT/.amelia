@@ -12,3 +12,5 @@
     insteadOf = "https://github.com/monzo/"
 [alias]
 	logr = log --reverse
+[fetch]
+  prune = true
