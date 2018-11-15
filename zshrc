@@ -37,6 +37,8 @@ source $ZSH/oh-my-zsh.sh
 # Stop the user@host part appearing on the powerline when local, we know what system we're on!
 DEFAULT_USER=`whoami`
 
+# Enable Monzo SSHless workflows
+NO_MONZO_SSH=true
 # Monzo starter back init.
 [ -f $HOME/.starter-pack/zshrc ] && source $HOME/.starter-pack/zshrc
 
