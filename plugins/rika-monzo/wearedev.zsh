@@ -1,1 +1,0 @@
-alias wearedev="cd ~/src/github.com/monzo/wearedev/"

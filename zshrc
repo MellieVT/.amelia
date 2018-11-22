@@ -21,15 +21,15 @@ DISABLE_AUTO_TITLE="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Use another custom folder than $ZSH/custom
-ZSH_CUSTOM=~/.rika
+ZSH_CUSTOM=~/.amelia
 
 # Define plugins to load (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.rika/plugins/
+# Custom plugins may be added to ~/.amelia/plugins/
 plugins=(
   git
   kubectl
   helm
-  rika-monzo
+  amelia-sbg
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -39,8 +39,9 @@ DEFAULT_USER=`whoami`
 
 # Enable Monzo SSHless workflows
 NO_MONZO_SSH=true
-# Monzo starter back init.
 [ -f $HOME/.starter-pack/zshrc ] && source $HOME/.starter-pack/zshrc
+
+source $ZSH_CUSTOM/*.zsh
 
 # Display the trans flag Monzo logo
 source $ZSH_CUSTOM/monzo-trans
@@ -60,7 +61,7 @@ taskbc() {
     task add +work project:${branch} "Push branch"
     task add +work project:${branch} depends:$(task +LATEST limit:1 ids) "Open pull request"
     task add +work project:${branch} depends:$(task +LATEST limit:1 ids) "Get code review"
-    task add +work project:${branch} depends:$(task +LATEST limit:1 ids) "Deploy to s101"
+    task add +work project:${branch} depends:$(task +LATEST limit:1 ids) "Deploy to staging"
     task add +work project:${branch} depends:$(task +LATEST limit:1 ids) "Test in staging"
     task add +work project:${branch} depends:$(task +LATEST limit:1 ids) "Deploy to production"
 }

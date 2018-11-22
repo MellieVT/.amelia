@@ -1,16 +1,17 @@
 [user]
-	name = Rika Raybould
-	email = Rika@labcoats.eu
+	name = Amelia Ikeda
+	email = amelia@lolibrary.org
 
-[includeIf "gitdir:~/src/github.com/monzo/"]
-    path = ~/.rika/git/monzoconfig
+[includeIf "gitdir:~/src/github.com/lolibrary/"]
+    path = ~/.amelia/git/lolibraryconfig
 
-[includeIf "gitdir:~/src/git.projectflower.eu/"]
-    path = ~/.rika/git/flowerconfig
+[url "git@github.com:lolibrary/"]
+    insteadOf = "https://github.com/lolibrary/"
 
-[url "git@github.com:monzo/"]
-    insteadOf = "https://github.com/monzo/"
+[url "git@github.com:ameliaikeda/"]
+    insteadOf = "https://github.com/ameliaikeda/"
+
 [alias]
 	logr = log --reverse
 [fetch]
-  prune = true
+	prune = true

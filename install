@@ -7,8 +7,9 @@
 # Install oh-my-zsh
 [ ! -e ~/.oh-my-zsh ] && git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
-# Tap Homebrew Cask
+# Tap Homebrew Cask, Cask Fonts
 brew tap caskroom/cask
+brew tap homebrew/cask-fonts
 
 # Install Atom
 brew cask install atom
@@ -16,17 +17,8 @@ brew cask install atom
 # Install IINA
 brew cask install iina
 
-# Install Slack
-brew cask install slack
-
-# Install Docker
-brew cask install docker
-
-# Install 1Password
-brew cask install 1password
-
 # Install irccloud
-brew cask install irccloud
+brew cask install textual
 
 # Install Plex Media Player
 brew cask install plex-media-player
@@ -34,21 +26,45 @@ brew cask install plex-media-player
 # Install Transmit
 brew cask install transmit
 
+# Install 1Password CLI
+brew cask install 1password-cli
+
+# Install Source Code Pro (Nerd Font patched)
+brew cask install font-sourcecodepro-nerd-font
+
+# Install kubectl et al
+brew install kubernetes-cli
+
+# Install go's full build toolchain
+brew install go
+
+# Install httpie
+brew install httpie
+
+# Install jq for json filtering
+brew install jq
+
+# Install readline to fix certain software
+brew install readline
+
+# Install OpenSSH
+brew install openssh
+
 # Link git config
-ln -sf .rika/gitconfig ../.gitconfig
+ln -sf .amelia/gitconfig ../.gitconfig
 
 # Link .zshrc
-ln -sf .rika/zshrc ../.zshrc
+ln -sf .amelia/zshrc ../.zshrc
 
 # Link .zshenv
-ln -sf .rika/zshenv ../.zshenv
+ln -sf .amelia/zshenv ../.zshenv
 
 # Link .taskrc
-ln -sf .rika/taskrc ../.taskrc
+ln -sf .amelia/taskrc ../.taskrc
 
 # Link gpg-agent.conf
 mkdir -p ~/.gnupg
-ln -sf ../.rika/gpg-agent.conf ../.gnupg/gpg-agent.conf
+ln -sf ../.amelia/gpg-agent.conf ../.gnupg/gpg-agent.conf
 
 touch ~/.hushlogin
 
