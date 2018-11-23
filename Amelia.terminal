@@ -637,15 +637,15 @@
 	<data>
 	YnBsaXN0MDDUAQIDBAUGGBlYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
 	AAGGoKQHCBESVSRudWxs1AkKCwwNDg8QVk5TU2l6ZVhOU2ZGbGFnc1ZOU05hbWVWJGNs
-	YXNzI0AyAAAAAAAAEBCAAoADXxAeTWVzbG9MR0xEWkZvclBvd2VybGluZS1SZWd1bGFy
-	0hMUFRZaJGNsYXNzbmFtZVgkY2xhc3Nlc1ZOU0ZvbnSiFRdYTlNPYmplY3RfEA9OU0tl
-	eWVkQXJjaGl2ZXLRGhtUcm9vdIABCBEaIy0yNzxCS1JbYmlydHZ4mZ6psrm8xdfa3wAA
-	AAAAAAEBAAAAAAAAABwAAAAAAAAAAAAAAAAAAADh
+	YXNzI0AwAAAAAAAAEBCAAoADXxAmU291cmNlQ29kZVBybytQb3dlcmxpbmUrQXdlc29t
+	ZVJlZ3VsYXLSExQVFlokY2xhc3NuYW1lWCRjbGFzc2VzVk5TRm9udKIVF1hOU09iamVj
+	dF8QD05TS2V5ZWRBcmNoaXZlctEaG1Ryb290gAEIERojLTI3PEJLUltiaXJ0dnihprG6
+	wcTN3+LnAAAAAAAAAQEAAAAAAAAAHAAAAAAAAAAAAAAAAAAAAOk=
 	</data>
 	<key>FontAntialias</key>
 	<true/>
 	<key>FontHeightSpacing</key>
-	<real>0.90000000000000002</real>
+	<real>0.84999999999999998</real>
 	<key>FontWidthSpacing</key>
 	<real>1</real>
 	<key>ProfileCurrentVersion</key>
@@ -849,11 +849,11 @@
 	<key>WindowTitle</key>
 	<string></string>
 	<key>columnCount</key>
-	<integer>90</integer>
+	<integer>120</integer>
 	<key>name</key>
-	<string>Rika</string>
+	<string>Amelia</string>
 	<key>rowCount</key>
-	<integer>24</integer>
+	<integer>40</integer>
 	<key>type</key>
 	<string>Window Settings</string>
 </dict>
