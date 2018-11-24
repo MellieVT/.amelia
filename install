@@ -35,8 +35,8 @@ brew tap homebrew/cask-fonts
 # Install Source Code Pro (Nerd Font patched)
 brew cask install font-sourcecodepro-nerd-font
 
-# Install kubectl et al
-brew install kubernetes-cli go httpie jq readline openssh task
+# Install brew tools, etc.
+brew install kubernetes-cli go httpie jq readline openssh task mosh
 
 # Link git config
 ln -sf ~/.amelia/gitconfig ~/.gitconfig
@@ -55,6 +55,8 @@ mkdir -p ~/.gnupg
 ln -sf ~/.amelia/gpg-agent.conf ~/.gnupg/gpg-agent.conf
 
 touch ~/.hushlogin
+
+[ ! -e ~/.ssh/id_ed25519 ] && ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -C "amelia@lolibrary.org"
 
 # Change current shell to zsh
 shell_path="$(brew --prefix)/bin/zsh"
