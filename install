@@ -32,6 +32,14 @@ brew tap homebrew/cask-fonts
 # Install 1Password CLI
 [ ! -e /usr/local/bin/op ] && brew cask install 1password-cli
 
+# Install Signal Desktop (only used on fleetsmith-managed macbooks).
+[ ! -e /Applications/Signal.app ] && brew cask install signal
+
+# Install fleetsmith-managed apps if we're not on fleetsmith.
+[ ! -e /Applications/Slack.app ] && brew cask install slack
+[ ! -e "/Applications/Google Chrome.app" ] && brew cask install google-chrome
+[ ! -e /Applications/Docker.app ] && brew cask install docker
+
 # Install Source Code Pro (Nerd Font patched)
 brew cask install font-sourcecodepro-nerd-font
 
@@ -54,9 +62,9 @@ ln -sf ~/.amelia/taskrc ~/.taskrc
 mkdir -p ~/.gnupg
 ln -sf ~/.amelia/gpg-agent.conf ~/.gnupg/gpg-agent.conf
 
-touch ~/.hushlogin
-
 [ ! -e ~/.ssh/id_ed25519 ] && ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -C "amelia@lolibrary.org"
+
+touch ~/.hushlogin
 
 # Change current shell to zsh
 shell_path="$(brew --prefix)/bin/zsh"
