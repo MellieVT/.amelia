@@ -4,67 +4,55 @@
 # Install zsh from Homebrew if it hasn't been already (macOS one is OLD)
 [ ! -e /usr/local/bin/zsh ] && brew install zsh zsh-completions
 
+# Install git from homebrew if we haven't already
+[ ! -e /usr/local/bin/git ] && brew install git
+
 # Install oh-my-zsh
-[ ! -e ~/.oh-my-zsh ] && git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+[ ! -e ~/.oh-my-zsh ] && git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
 # Tap Homebrew Cask, Cask Fonts
 brew tap caskroom/cask
 brew tap homebrew/cask-fonts
 
 # Install Atom
-brew cask install atom
+[ ! -e /usr/local/bin/atom ] && brew cask install atom
 
 # Install IINA
-brew cask install iina
+[ ! -e /usr/local/bin/iina ] && brew cask install iina
 
-# Install irccloud
-brew cask install textual
+# Install Textual for IRC
+[ ! -e /Applications/Textual.app ] && brew cask install textual
 
 # Install Plex Media Player
-brew cask install plex-media-player
+[ ! -e "/Applications/Plex Media Player.app" ] && brew cask install plex-media-player
 
 # Install Transmit
-brew cask install transmit
+[ ! -e /Applications/Transmit.app ] && brew cask install transmit
 
 # Install 1Password CLI
-brew cask install 1password-cli
+[ ! -e /usr/local/bin/op ] && brew cask install 1password-cli
 
 # Install Source Code Pro (Nerd Font patched)
 brew cask install font-sourcecodepro-nerd-font
 
 # Install kubectl et al
-brew install kubernetes-cli
-
-# Install go's full build toolchain
-brew install go
-
-# Install httpie
-brew install httpie
-
-# Install jq for json filtering
-brew install jq
-
-# Install readline to fix certain software
-brew install readline
-
-# Install OpenSSH
-brew install openssh
+brew install kubernetes-cli go httpie jq readline openssh task
 
 # Link git config
-ln -sf .amelia/gitconfig ../.gitconfig
+ln -sf ~/.amelia/gitconfig ~/.gitconfig
 
 # Link .zshrc
-ln -sf .amelia/zshrc ../.zshrc
+ln -sf ~/.amelia/zshrc ~/.zshrc
 
 # Link .zshenv
-ln -sf .amelia/zshenv ../.zshenv
+ln -sf ~/.amelia/zshenv ~/.zshenv
 
 # Link .taskrc
-ln -sf .amelia/taskrc ../.taskrc
+ln -sf ~/.amelia/taskrc ~/.taskrc
 
 # Link gpg-agent.conf
 mkdir -p ~/.gnupg
-ln -sf ../.amelia/gpg-agent.conf ../.gnupg/gpg-agent.conf
+ln -sf ~/.amelia/gpg-agent.conf ~/.gnupg/gpg-agent.conf
 
 touch ~/.hushlogin
 
