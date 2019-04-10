@@ -5,11 +5,17 @@
 [includeIf "gitdir:~/src/github.com/lolibrary/"]
     path = ~/.amelia/git/lolibraryconfig
 
+[includeIf "gitdir:~/src/github.com/monzo/"]
+    path = ~/.amelia/git/monzoconfig
+
 [url "git@github.com:lolibrary/"]
     insteadOf = "https://github.com/lolibrary/"
 
 [url "git@github.com:ameliaikeda/"]
     insteadOf = "https://github.com/ameliaikeda/"
+
+[url "git@github.com:monzo/"]
+    insteadOf = "https://github.com/monzo/"
 
 [alias]
 	logr = log --reverse
