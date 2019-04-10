@@ -1,2 +1,4 @@
-export GOPATH=$HOME
-export PATH="$PATH:$GOPATH/bin"
+export GOPATH="$HOME"
+export GOBIN="$GOPATH/bin"
+export PATH="$PATH:$GOBIN"
+#export GO111MODULE=on
