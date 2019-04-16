@@ -23,22 +23,15 @@ brew cask install font-sourcecodepro-nerd-font
 # install Google Cloud SDK (gcloud, etc)
 brew cask install google-cloud-sdk
 
-# Install kubectl et al
-brew install kubernetes-cli kubernetes-helm
-
-# Install Signal Desktop (only used on fleetsmith-managed macbooks).
-[ ! -e /Applications/Signal.app ] && brew cask install signal
-
 # Install fleetsmith-managed apps if we're not on fleetsmith.
 [ ! -e /Applications/Slack.app ] && brew cask install slack
 [ ! -e "/Applications/Google Chrome.app" ] && brew cask install google-chrome
-[ ! -e /Applications/Docker.app ] && brew cask install docker
 
 # Install Source Code Pro (Nerd Font patched)
 brew cask install font-sourcecodepro-nerd-font
 
 # Install brew tools, etc.
-brew install kubernetes-cli go httpie jq readline openssh task mosh
+brew install kubernetes-cli kubernetes-helm go httpie jq readline openssh task mosh
 
 # Link git config
 ln -sf ~/.amelia/gitconfig ~/.gitconfig
