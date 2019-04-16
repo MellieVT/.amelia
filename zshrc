@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
-ZSH_THEME="rika"
+ZSH_THEME="amelia"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -29,7 +29,7 @@ plugins=(
   git
   kubectl
   helm
-  amelia-sbg
+  monzo
 )
 
 source $ZSH/oh-my-zsh.sh
