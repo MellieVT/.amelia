@@ -14,23 +14,17 @@
 brew tap caskroom/cask
 brew tap homebrew/cask-fonts
 
-# Install Atom
-[ ! -e /usr/local/bin/atom ] && brew cask install atom
-
-# Install IINA
-[ ! -e /usr/local/bin/iina ] && brew cask install iina
-
-# Install Textual for IRC
-[ ! -e /Applications/Textual.app ] && brew cask install textual
-
-# Install Plex Media Player
-[ ! -e "/Applications/Plex Media Player.app" ] && brew cask install plex-media-player
-
-# Install Transmit
-[ ! -e /Applications/Transmit.app ] && brew cask install transmit
-
 # Install 1Password CLI
 [ ! -e /usr/local/bin/op ] && brew cask install 1password-cli
+
+# Install Source Code Pro (Nerd Font patched)
+brew cask install font-sourcecodepro-nerd-font
+
+# install Google Cloud SDK (gcloud, etc)
+brew cask install google-cloud-sdk
+
+# Install kubectl et al
+brew install kubernetes-cli kubernetes-helm
 
 # Install Signal Desktop (only used on fleetsmith-managed macbooks).
 [ ! -e /Applications/Signal.app ] && brew cask install signal
