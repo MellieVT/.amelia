@@ -3,6 +3,8 @@ export ZSH=~/.oh-my-zsh
 
 ZSH_THEME="amelia"
 
+BRING_YOUR_OWN_TRIAS_PS1="true"
+
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
@@ -43,25 +45,4 @@ NO_MONZO_SSH=true
 
 source $ZSH_CUSTOM/*.zsh
 
-# Display the trans flag Monzo logo
-source $ZSH_CUSTOM/monzo-trans
-
-# Display task list
-task
-
-# Taskwarrior
-# List tasks for branch
-taskb() {
-    task list project:$(git rev-parse --abbrev-ref HEAD | cut -f1,2 -d'-');
-}
-
-# Create generic task list for a work PR
-taskbc() {
-    branch=$(git rev-parse --abbrev-ref HEAD | cut -f1,2 -d'-');
-    task add +work project:${branch} "Push branch"
-    task add +work project:${branch} depends:$(task +LATEST limit:1 ids) "Open pull request"
-    task add +work project:${branch} depends:$(task +LATEST limit:1 ids) "Get code review"
-    task add +work project:${branch} depends:$(task +LATEST limit:1 ids) "Deploy to staging"
-    task add +work project:${branch} depends:$(task +LATEST limit:1 ids) "Test in staging"
-    task add +work project:${branch} depends:$(task +LATEST limit:1 ids) "Deploy to production"
-}
+[ -f $HOME/src/github.com/monzo/starter-pack/zshrc ] && source $HOME/src/github.com/monzo/starter-pack/zshrc

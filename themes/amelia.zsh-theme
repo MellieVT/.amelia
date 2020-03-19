@@ -90,7 +90,7 @@ prompt_git() {
   local PL_BRANCH_CHAR
   () {
     local LC_ALL="" LC_CTYPE="en_US.UTF-8"
-    PL_BRANCH_CHAR=$'\ue0a0'         # 
+    PL_BRANCH_CHAR=$'\ue725'         # 
   }
   local ref dirty mode repo_path
   repo_path=$(git rev-parse --git-dir 2>/dev/null)
@@ -132,10 +132,14 @@ prompt_dir() {
   prompt_segment cyan black '%~'
 }
 
+prompt_emoji() {
+  prompt_segment magenta black '\u2764'
+}
+
 prompt_triasprofile() {
-  local triasprofile="$TRIAS_PROFILE"
+  local triasprofile="$TRIAS_ENV"
   if [[ -n "$triasprofile" ]]; then
-        prompt_segment cyan black "$triasprofile"
+        prompt_segment magenta black "$triasprofile"
   fi
 }
 
@@ -146,9 +150,9 @@ prompt_triasprofile() {
 prompt_status() {
   local symbols
   symbols=()
-  [[ $RETVAL -ne 0 ]] && symbols+="%{%F{red}%}✘"
-  [[ $UID -eq 0 ]] && symbols+="%{%F{yellow}%}⚡"
-  [[ $(jobs -l | wc -l) -gt 0 ]] && symbols+="%{%F{cyan}%}⚙"
+  [[ $RETVAL -ne 0 ]] && symbols+="%{%F{yellow}%}\uf071 "
+  [[ $UID -eq 0 ]] && symbols+="%{%F{magenta}%}\uf0e7 "
+  [[ $(jobs -l | wc -l) -gt 0 ]] && symbols+="%{%F{cyan}%}\uf085 "
 
   [[ -n "$symbols" ]] && prompt_segment black default "$symbols"
 }

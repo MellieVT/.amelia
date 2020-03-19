@@ -1,0 +1,48 @@
+# Install Homebrew
+[ $(command -v brew) == "" ] && ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# Install zsh from Homebrew if it hasn't been already (macOS one is OLD)
+[ ! -e /usr/local/bin/zsh ] && brew install zsh zsh-completions
+
+# Install git from homebrew if we haven't already
+[ ! -e /usr/local/bin/git ] && brew install git
+
+# Install oh-my-zsh
+[ ! -e ~/.oh-my-zsh ] && git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+
+# Tap Homebrew Cask, Cask Fonts
+brew tap caskroom/cask
+brew tap homebrew/cask-fonts
+
+# Install 1Password CLI
+[ ! -e /usr/local/bin/op ] && brew cask install 1password-cli
+
+# Install Source Code Pro (Nerd Font patched)
+brew cask install font-sourcecodepro-nerd-font
+
+# Link git config
+ln -sf ~/.amelia/gitconfig ~/.gitconfig
+
+# Link .zshrc
+ln -sf ~/.amelia/zshrc ~/.zshrc
+
+# Link .zshenv
+ln -sf ~/.amelia/zshenv ~/.zshenv
+
+# Link .taskrc
+ln -sf ~/.amelia/taskrc ~/.taskrc
+
+# Link gpg-agent.conf
+mkdir -p ~/.gnupg
+ln -sf ~/.amelia/gpg-agent.conf ~/.gnupg/gpg-agent.conf
+
+[ ! -e ~/.ssh/id_ed25519 ] && ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -C "amelia@lolibrary.org"
+
+touch ~/.hushlogin
+
+# Change current shell to zsh
+shell_path="$(brew --prefix)/bin/zsh"
+if ! grep "$shell_path" /etc/shells > /dev/null 2>&1 ; then
+ sudo bash -c "echo $shell_path >> /etc/shells"
+fi
+[ $SHELL != $shell_path ] && chsh -s "$shell_path"
